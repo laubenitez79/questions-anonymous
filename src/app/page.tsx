@@ -1,5 +1,7 @@
 import {createClient} from "@supabase/supabase-js";
 import {revalidatePath} from "next/cache";
+import {redirect} from "next/navigation";
+import Link from "next/link";
 
 const supabase = createClient(
   "https://kzaxahkhotoyvmujnsut.supabase.co",
@@ -22,10 +24,12 @@ export default async function Home() {
     "use server";
 
     const question = formData.get("question");
+    const id = Date.now().toString();
 
-    await supabase.from("questions").insert({text: question});
+    await supabase.from("questions").insert({text: question, id});
 
     revalidatePath("/");
+    redirect(`/${id}`);
   }
 
   return (
@@ -49,12 +53,12 @@ export default async function Home() {
       <hr className="opacity-40" />
       <article className="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] items-start gap-4">
         {questions.map((question) => (
-          <section key={question.id} className="grid">
+          <Link key={question.id} className="grid" href={`${question.id}`}>
             <p className=" rounded-t-lg bg-pink-500 p-4 text-xl font-medium text-white">
               Questioncy
             </p>
             <p className="rounded-b-lg bg-white p-4 text-xl text-black">{question.text}</p>
-          </section>
+          </Link>
         ))}
       </article>
     </div>
