@@ -12,7 +12,7 @@ export default async function Question({params: {id}}: {params: {id: string}}) {
     .select()
     .eq("id", id)
     .single()
-    .then(({data}) => data as {id: string; text: string}[]);
+    .then(({data}) => data as {id: string; text: string});
 
   return (
     <article className="grid gap-4">
