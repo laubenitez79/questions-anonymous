@@ -6,6 +6,7 @@ body {
   color-scheme: dark;
   background-color: Canvas;
   color: CanvasText;
+  background-color: black;
 }
 
 button{
