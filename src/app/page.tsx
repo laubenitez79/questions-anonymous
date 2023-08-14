@@ -36,7 +36,9 @@ export default async function Home() {
     <div className="grid gap-8">
       <form action={handleSubmit} className="grid gap-4">
         <section className="grid">
-          <p className="rounded-t-lg bg-pink-500 p-4 text-xl font-medium text-white">Questioncy</p>
+          <p className="rounded-t-lg bg-orange-500 p-4 text-xl font-medium text-white">
+            PreguntaXpress
+          </p>
           <input
             className="rounded-b-lg bg-white p-4 text-xl text-black"
             name="question"
@@ -44,7 +46,7 @@ export default async function Home() {
           />
         </section>
         <button
-          className="transition-color w-full rounded-lg bg-pink-500 p-4 text-xl font-medium hover:bg-pink-600"
+          className="transition-color w-full rounded-lg bg-orange-500 p-4 text-xl font-medium hover:bg-orange-600"
           type="submit"
         >
           Enviar pregunta
@@ -54,8 +56,8 @@ export default async function Home() {
       <article className="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] items-start gap-4">
         {questions.map((question) => (
           <Link key={question.id} className="grid" href={`${question.id}`}>
-            <p className=" rounded-t-lg bg-pink-500 p-4 text-xl font-medium text-white">
-              Questioncy
+            <p className=" rounded-t-lg bg-orange-500 p-4 text-xl font-medium text-white">
+              PreguntaXpress
             </p>
             <p className="rounded-b-lg bg-white p-4 text-xl text-black">{question.text}</p>
           </Link>

@@ -7,3 +7,7 @@ body {
   background-color: Canvas;
   color: CanvasText;
 }
+
+button{
+  background-color: rgb(249 115 22) !important;
+}

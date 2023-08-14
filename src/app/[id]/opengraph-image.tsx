@@ -36,14 +36,14 @@ export default async function Image({params: {id}}: {params: {id: string}}) {
       >
         <div
           style={{
-            backgroundColor: "hotpink",
+            backgroundColor: "orange",
             color: "white",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          <p>Questioncy</p>
+          <p>PreguntaXpress</p>
         </div>
         <div
           style={{

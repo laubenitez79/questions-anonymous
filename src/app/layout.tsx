@@ -3,7 +3,7 @@ import type {Metadata} from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Questioncy",
+  title: "PreguntaXpress",
   description: "Aplicación de preguntas y respuestas anónimas - Goncy",
 };
 
