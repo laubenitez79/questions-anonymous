@@ -9,6 +9,53 @@ body {
   background-color: black;
 }
 
-button{
+.swal2-confirm{
   background-color: rgb(249 115 22) !important;
+}
+
+.animate-emoji-cascade {
+  animation: emojiCascade 1s ease-in-out;
+}
+
+@keyframes emojiCascade {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.loader-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.loader {
+  /* Estilos del loader */
+  text-align: center;
+}
+
+.loader img {
+  /* Estilos de la imagen de carga */
+  width: 500px; /* Ajusta el tamanio de la imagen segun tus necesidades */
+  height: 500px;
+  animation: spinScale 3.9s infinite; /* Aplica la animacion */
+}
+
+@keyframes spinScale {
+  0% {
+    transform: rotate(0deg) scale(1); /* Estado inicial */
+  }
+  100% {
+    transform: rotate(360deg) scale(0); /* Estado final */
+  }
 }
